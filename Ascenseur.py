@@ -31,6 +31,7 @@ while True:
     if((int(niveauActuel) > 12 or int(niveauRecherche) > 12 or int(niveauActuel) < -4 or int(niveauRecherche) < -4)):
         break
     else:
+    #Gestion de l'appel de l'ascenseur pour qu'il vienne d'ane d'abord à vous avant d'indiquer votre niveau de destination 
          if(int(niveauActuel) > int(niveauRecherche)):
             descente(niveauActuel,niveauRecherche)
             print("On est au niveau",niveauRecherche)
@@ -40,7 +41,8 @@ while True:
           
          niveauActuel=niveauRecherche  
          niveauRecherche=input("A quelle niveau voulez-vous allez ? : ")
-         if((int(niveauActuel) > 12 or int(niveauRecherche) > 12 or int(niveauActuel) < -4 or int(niveauRecherche) < -4)):
+     #Gestion de la montée ou la descente de l'ascenseur en fonction de votre destination 
+        if((int(niveauActuel) > 12 or int(niveauRecherche) > 12 or int(niveauActuel) < -4 or int(niveauRecherche) < -4)):
             break
          if(int(niveauActuel) < int(niveauRecherche)):
             montee(niveauActuel,niveauRecherche)
